@@ -4,6 +4,7 @@ export const Container = styled.div`
     background-color: #27282F;
     color: #FFF;
     min-height: 100vh;
+    padding: 30px;    
 `;
 
 export const Area = styled.div`
@@ -31,7 +32,20 @@ export const ScreenWarning = styled.div`
 export const PhotoList = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @media (max-width: 520px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 `;
 
 export const UploadForm = styled.form`
@@ -40,6 +54,7 @@ export const UploadForm = styled.form`
     border-radius: 10px;
     margin-bottom: 30px;
 
+  
     input[type=submit] {
         background-color: #756DF4;
         border: 0;
@@ -53,5 +68,9 @@ export const UploadForm = styled.form`
         &:hover {
             opacity: .9;
         }
+    }
+
+    input[type=file] {
+        word-break: break-word;
     }
 `;
