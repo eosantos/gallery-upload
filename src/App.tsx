@@ -4,6 +4,7 @@ import * as Photos from './services/photos';
 import { Photo } from './types/Photo';
 import { PhotoItem } from './components/PhotoItem';
 
+
 const App = () => {
   const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -51,7 +52,8 @@ const App = () => {
         <C.Header>Galeria de Fotos</C.Header>
 
         <C.UploadForm method="POST" onSubmit={handleFormSubmit}>
-          <input type="file" name="image" />
+          <label htmlFor="image">Selecione o arquivo</label>
+          <input id="image" type="file" name="image" />
           <input type="submit" value="Enviar" />
           {uploading && "Enviando..."}
         </C.UploadForm>

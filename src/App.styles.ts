@@ -51,9 +51,36 @@ export const PhotoList = styled.div`
 export const UploadForm = styled.form`
     background-color: #3D3F43;
     padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    border-radius: 10px;  
+    margin-bottom: 30px; 
+    text-align: center;    
+    
+    @media (max-width: 520px) {
+        padding-top: 31px;
+    }
 
+    input[type=file] {
+        display: none
+    }
+
+    label {
+        background-color: #3D3F43;
+        padding: 5px 10px;
+        margin-left: 20px;
+        width: 100px;
+        border: 2px dotted #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 15px; 
+
+        &:hover {           
+            background-color: #27282F;
+        }
+
+        @media (max-width: 520px) {            
+            margin: 10px 10px;
+        }
+    }
   
     input[type=submit] {
         background-color: #756DF4;
@@ -62,15 +89,15 @@ export const UploadForm = styled.form`
         padding: 8px 16px;
         font-size: 15px;
         border-radius: 10px;
-        margin: 0 20px;
+        margin: 0 50px;
         cursor: pointer;
 
         &:hover {
             opacity: .9;
         }
-    }
 
-    input[type=file] {
-        word-break: break-word;
-    }
+        @media (max-width: 475px) {
+            margin-top: 30px
+        }
+    }    
 `;
