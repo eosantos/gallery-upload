@@ -18,6 +18,10 @@ export const Header = styled.h1`
     padding: 0;
     text-align: center;
     margin-bottom: 30px;
+
+    @media (max-width: 520px) {
+        font-size: 24px;      
+    }
 `;
 
 export const ScreenWarning = styled.div`

@@ -3,6 +3,8 @@ import * as C from './App.styles';
 import * as Photos from './services/photos';
 import { Photo } from './types/Photo';
 import { PhotoItem } from './components/PhotoItem';
+import { LogoGallery } from './components/Logo';
+
 
 
 const App = () => {
@@ -49,7 +51,7 @@ const App = () => {
   return (
     <C.Container>
       <C.Area>
-        <C.Header>Galeria de Fotos</C.Header>
+        <C.Header><LogoGallery />Galeria de Fotos</C.Header>
 
         <C.UploadForm method="POST" onSubmit={handleFormSubmit}>
           <label htmlFor="image">Selecione o arquivo</label>
